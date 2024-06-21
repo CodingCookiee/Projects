@@ -86,3 +86,7 @@ ul[role="list"] {
 }
 
 /* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
