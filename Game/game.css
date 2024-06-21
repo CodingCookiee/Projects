@@ -137,7 +137,7 @@ body {
 }
   */
   .image-container {
-    width: 300px; /* Set the width of the container */
+    /* Set the width of the container */
     height: 15vh; /* Set the height to 15% of the viewport height */
     background-color: #fff; /* Set the desired background color for the container */
     position: relative; /* Position relative for pseudo-elements positioning */
@@ -151,20 +151,20 @@ body {
     top: 0;
     bottom: 0;
     width: 45%; /* Adjust the width of the images */
-    background-size: cover;
+    background-size:contain;
     background-repeat: no-repeat;
 }
 
 .image-container::before {
-    left: 0;
+    left: 65%;
     background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* First image */
-    background-color: #333; /* Background color for the first image */
+    background-color: #fff; /* Background color for the first image */
 }
 
 .image-container::after {
-    left: 50%; /* Position the second image next to the first */
+    left: 15%; /* Position the second image next to the first */
     background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */
-    background-color: #333; /* Background color for the second image */
+    background-color: #fff; /* Background color for the second image */
 }
 .score {
   font-size: 2rem;
