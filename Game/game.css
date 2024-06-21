@@ -126,22 +126,13 @@ body {
   color: #ccc;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-/*.image-container {
-  height:10vh;
-  background-color: #fff;
-  background-image: url("https://i.ibb.co/6wxgd27/hand.png"), url("https://i.ibb.co/6wxgd27/hand.png");
-  background-size: 8% 80%, 8% 80%; 
-  background-repeat: no-repeat;
-  background-position: 20% 0, 75% 0;
-  margin-top: 15px;
-}
-  */
   .image-container {
-    /* Set the width of the container */
-    height: 15vh; /* Set the height to 15% of the viewport height */
-    background-color: #fff; /* Set the desired background color for the container */
+    
+    height: 15vh; 
+    background-color: #fff; 
     position: relative; /* Position relative for pseudo-elements positioning */
     overflow: hidden; /* Hide overflow of pseudo-elements */
+    margin-top: 1rem;
 }
 
 .image-container::before,
