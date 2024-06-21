@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Ninja</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="output" style=" height: 500px; overflow: auto;">
+    <label for="month">Select Months: </label>
+    <select id="month-select" name="month-select" title="month-select">
+      <script>
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        let options = "";
+        months.forEach((month) => {
+          options += `<option value="${month}">${month}</option>`;
+        });
+
+        document.getElementById("month-select").innerHTML = options;
+      </script>
+    </select>
+    <h1></h1>
+    <ul></ul>
+
+  </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<
