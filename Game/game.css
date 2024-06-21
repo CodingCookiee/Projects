@@ -118,14 +118,25 @@ body {
   padding-bottom: 20px;
   flex-shrink: 1;
 }
-.header a {
-  color: #fff;
-  text-decoration: wavy;
+
+header{
+  animation: zoomInOut 5s forwards;
 }
-.header a:hover {
-  color: #ccc;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    background-color: #fff;
+    color: #333;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+
 .image-container {
   height: 15vh;
   background-color: #fff;
@@ -158,13 +169,24 @@ body {
   margin: 10px;
   display: flex;
   justify-content: space-around;
+  transition: all 0.5s ease-in-out;
 }
-  p{
-    background-color: hsl(240, 30%, 20%);
-    color: #fff;
-    padding:1rem;
-    border-radius: 10px;
-  }
+p {
+  background-color: hsl(240, 30%, 20%);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+p:hover{
+  background-color: #fff;
+  color: #333;
+  font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+    box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
+  transition: all 0.5s ease;
+}
+
 
 .choices {
   display: flex;
@@ -185,13 +207,21 @@ body {
   margin: 10px;
   box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
   border-radius: 5%;
+  transition: background-color 0.5s ease;
 }
+.button:hover, .restart-button:hover {
+  background-color: #fff;
+  color:#333;
+} 
+
 .result {
   font-size: 2rem;
-  font-weight:normal;
+  font-weight: normal;
   margin: 10px;
   display: flex;
   justify-content: space-around;
+  overflow-y: auto;
+    word-wrap: break-word;
 }
 .restart-container {
   display: flex;
@@ -210,4 +240,14 @@ body {
   margin: 10px;
   box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
   border-radius: 5%;
+}
+/* Responsive Design */
+@media (max-width: 480px) {
+  .button, .restart-button{
+      padding: 10px 15px;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+
 }
