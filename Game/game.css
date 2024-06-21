@@ -157,14 +157,14 @@ body {
 
 .image-container::before {
     left: 65%;
-    background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* First image */
-    background-color: #fff; /* Background color for the first image */
+    background-image: url('https://i.ibb.co/6wxgd27/hand.png');
+    background-color: #fff; 
 }
 
 .image-container::after {
-    left: 15%; /* Position the second image next to the first */
+    left: 15%; 
     background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */
-    background-color: #fff; /* Background color for the second image */
+    background-color: #fff; 
 }
 .score {
   font-size: 2rem;
