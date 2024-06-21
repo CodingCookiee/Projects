@@ -141,7 +141,7 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 45%; /* Adjust the width of the images */
+    width: 10%; /* Adjust the width of the images */
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -149,13 +149,11 @@ body {
 .image-container::before {
     left: 70%;
     background-image: url('https://i.ibb.co/6wxgd27/hand.png');
-    background-color: #fff; 
 }
 
 .image-container::after {
     left: 20%; 
-    background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */
-    background-color: #fff; 
+    background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */ 
 }
 .score {
   font-size: 2rem;
