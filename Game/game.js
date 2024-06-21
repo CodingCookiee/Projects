@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   restart.addEventListener("click", () => {
     playerScore.textContent = "0";
     computerScore.textContent = "0";
-    result.textContent = "Start Again!";
+    result.textContent = "Start Again";
   });
   function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];

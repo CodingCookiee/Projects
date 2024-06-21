@@ -119,7 +119,7 @@ body {
   flex-shrink: 1;
 }
 
-header{
+header {
   animation: zoomInOut 5s forwards;
 }
 
@@ -128,7 +128,7 @@ header{
     transform: scale(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1);
     background-color: #fff;
     color: #333;
   }
@@ -138,29 +138,18 @@ header{
 }
 
 .image-container {
-  height: 15vh;
+  height: 16vh;
   background-color: #fff;
-  position: relative; /* Position relative for pseudo-elements positioning */
   margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.image {
-  width: 30%;
-  height: 60%;
+  background-image: url("https://i.ibb.co/sPRxMcb/Simplisticgameicon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-blend-mode: luminosity;
-  flex: 1;
-}
-
-.image.image1,
-.image.image2 {
-  background-image: url("https://i.ibb.co/6wxgd27/hand.png");
-  background-color: #fff;
+  background-blend-mode: darken;
 }
 
 .score {
@@ -177,16 +166,15 @@ p {
   padding: 1rem;
   border-radius: 10px;
 }
-p:hover{
+p:hover {
   background-color: #fff;
   color: #333;
   font-size: 2rem;
-    font-weight: bolder;
-    cursor: pointer;
-    box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
   transition: all 0.5s ease;
 }
-
 
 .choices {
   display: flex;
@@ -209,19 +197,20 @@ p:hover{
   border-radius: 5%;
   transition: background-color 0.5s ease;
 }
-.button:hover, .restart-button:hover {
+.button:hover,
+.restart-button:hover {
   background-color: #fff;
-  color:#333;
-} 
+  color: #333;
+}
 
 .result {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: normal;
   margin: 10px;
   display: flex;
   justify-content: space-around;
   overflow-y: auto;
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
 .restart-container {
   display: flex;
@@ -243,11 +232,11 @@ p:hover{
 }
 /* Responsive Design */
 @media (max-width: 480px) {
-  .button, .restart-button{
-      padding: 10px 15px;
+  .button,
+  .restart-button {
+    padding: 10px 15px;
   }
-  p{
+  p {
     font-size: 1.5rem;
   }
-
 }
