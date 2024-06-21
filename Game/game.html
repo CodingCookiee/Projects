@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="game.css" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game </title>
-    <link rel="stylesheet" href="game.css">
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <header class="header">
-            <h1>You Think You Can Win?</h1>
-        </header>
-        <div class="image-container" id="image-container">
-        </div>
+      <header class="header">
+        <h1>You Think You Can Win?</h1>
+      </header>
+      <div class="image-container" id="image-container">
+        <div class="image image1"></div>
+        <div class="image image2"></div>
+      </div>
 
-        <div class="score">
-            <p>PlayerScore: <span id="player-score">0</span></p>
-            <p>ComputerScore: <span id="computer-score">0</span></p>
-        </div>
-        <div class="choices">
-            <button id="rock" class="button">ROCK</button>
-            <button id="paper" class="button">PAPER</button>
-            <button id="scissors" class="button">SCISSORS</button>
-        </div>
-        <div id="result" class="result">Make Your Choice!</div>
-        <div class="restart-container">
-            <button id="restart-button" class="restart-button">RESTART</button>
-        </div>
+      <div class="score">
+        <p>PlayerScore: <span id="player-score">0</span></p>
+        <p>ComputerScore: <span id="computer-score">0</span></p>
+      </div>
+      <div class="choices">
+        <button id="rock" class="button">ROCK</button>
+        <button id="paper" class="button">PAPER</button>
+        <button id="scissors" class="button">SCISSORS</button>
+      </div>
+      <div id="result" class="result">Make Your Choice!</div>
+      <div class="restart-container">
+        <button id="restart-button" class="restart-button">RESTART</button>
+      </div>
     </div>
     <script src="game.js"></script>
-</body>
-
+  </body>
 </html>

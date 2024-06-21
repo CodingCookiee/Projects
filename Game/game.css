@@ -126,34 +126,33 @@ body {
   color: #ccc;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-  .image-container {
-    
-    height: 15vh; 
-    background-color: #fff; 
-    position: relative; /* Position relative for pseudo-elements positioning */
-    overflow: hidden; /* Hide overflow of pseudo-elements */
-    margin-top: 1rem;
+.image-container {
+  height: 15vh;
+  background-color: #fff;
+  position: relative; /* Position relative for pseudo-elements positioning */
+  overflow: hidden; /* Hide overflow of pseudo-elements */
+  margin-top: 1rem;
 }
 
 .image-container::before,
 .image-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 10%; /* Adjust the width of the images */
-    background-size:contain;
-    background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%; /* Adjust the width of the images */
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .image-container::before {
-    left: 70%;
-    background-image: url('https://i.ibb.co/6wxgd27/hand.png');
+  left: 70%;
+  background-image: url("https://i.ibb.co/6wxgd27/hand.png");
 }
 
 .image-container::after {
-    left: 20%; 
-    background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */ 
+  left: 20%;
+  background-image: url("https://i.ibb.co/6wxgd27/hand.png"); /* Second image */
 }
 .score {
   font-size: 2rem;
