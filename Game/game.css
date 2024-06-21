@@ -127,12 +127,16 @@ body {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .image-container {
-  height:15vh;
-  background-color: #fff;
+  height:10vh;
+  background-color: #333;
   background-image: url("https://i.ibb.co/6wxgd27/hand.png"), url("https://i.ibb.co/6wxgd27/hand.png");
   background-size: 10% 80%, 10% 80%; 
   background-repeat: no-repeat;
   background-position: 20% 0, 75% 0;
+  border-radius: 5%;
+  padding: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 /*
 #image1, #image2{
