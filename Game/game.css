@@ -126,40 +126,46 @@ body {
   color: #ccc;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-  .image-container {
-    
-    height: 15vh; 
-    background-color: #fff; 
-    position: relative; /* Position relative for pseudo-elements positioning */
-    margin-top: 1rem;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.image-container {
+  height: 15vh;
+  background-color: #fff;
+  position: relative; /* Position relative for pseudo-elements positioning */
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .image {
-  width: 30%; 
-  height: 60%; 
-  background-size:contain; 
-  background-repeat: no-repeat; 
-  background-position: center; 
-  background-blend-mode:luminosity;
+  width: 30%;
+  height: 60%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: luminosity;
   flex: 1;
- 
 }
 
-.image.image1, .image.image2 {
-  background-image: url('https://i.ibb.co/6wxgd27/hand.png'); 
-  background-color: #fff; 
+.image.image1,
+.image.image2 {
+  background-image: url("https://i.ibb.co/6wxgd27/hand.png");
+  background-color: #fff;
 }
 
 .score {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: lighter;
   margin: 10px;
   display: flex;
   justify-content: space-around;
 }
+  p{
+    background-color: hsl(240, 30%, 20%);
+    color: #fff;
+    padding:1rem;
+    border-radius: 10px;
+  }
+
 .choices {
   display: flex;
   justify-content: space-around;
@@ -169,11 +175,12 @@ body {
   margin: 20px;
 }
 .button {
-  background-color: #333;
+  background-color: hsl(240, 30%, 20%);
   color: #fff;
   border: none;
   padding: 10px 25px;
   font-size: 1rem;
+  font-weight: lighter;
   cursor: pointer;
   margin: 10px;
   box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
@@ -181,7 +188,7 @@ body {
 }
 .result {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight:normal;
   margin: 10px;
   display: flex;
   justify-content: space-around;
@@ -193,11 +200,12 @@ body {
   align-self: center;
 }
 .restart-button {
-  background-color: #333;
+  background-color: hsl(240, 30%, 20%);
   color: #fff;
   border: none;
   padding: 10px 25px;
   font-size: 1rem;
+  font-weight: lighter;
   cursor: pointer;
   margin: 10px;
   box-shadow: 1.5px 1.5px hsla(0, 0%, 20%, 0.5);
