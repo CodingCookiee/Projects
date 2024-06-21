@@ -156,13 +156,13 @@ body {
 }
 
 .image-container::before {
-    left: 65%;
+    left: 70%;
     background-image: url('https://i.ibb.co/6wxgd27/hand.png');
     background-color: #fff; 
 }
 
 .image-container::after {
-    left: 15%; 
+    left: 20%; 
     background-image: url('https://i.ibb.co/6wxgd27/hand.png'); /* Second image */
     background-color: #fff; 
 }
