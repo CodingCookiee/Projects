@@ -95,6 +95,7 @@ body {
 .container {
   margin: 6rem;
   padding: 10rem;
+  padding-bottom: 15rem;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 20%, 1);
