@@ -92,7 +92,15 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background-color: #fff;
+  background-color: #fff1ff;
   margin: 0;
   padding: 0;
+}
+.container {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
+  border-radius: 10px;
 }
