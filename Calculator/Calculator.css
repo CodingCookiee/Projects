@@ -97,7 +97,6 @@ body {
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
 }
 .calculator{
   display: flex;
@@ -105,10 +104,11 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid #333;
-  background-color: #fff;
+  background-color: rgb(17, 8, 66);
   width: 400px;
   height:600px;
   border-radius: 2%;
   padding: 20px;
   margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
 }
