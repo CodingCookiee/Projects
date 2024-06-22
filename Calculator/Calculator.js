@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       previousNumber = currentNumber;
       currentNumber = "";
       operatorValue = operator.textContent;
-      result.textContent = previousNumber + " " + operatorValue;
     });
   });
 
