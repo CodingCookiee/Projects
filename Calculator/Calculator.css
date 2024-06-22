@@ -129,12 +129,14 @@ body {
   background-color: #fff;
   font-size: 1.5rem;
   border-radius: 2%;
-  width: 95%;
-  height: 50%;
-  text-align:right;
-  margin-right: 10px;
+  overflow: hidden;        
+  display: flex;          
+  justify-content: flex-end; 
+  align-items: center;          
+  box-sizing: border-box;
+  padding: 10px;
   margin-left: 10px;
-  padding-top: 10px;
+  margin-right: 10px;
 
 } 
 button{

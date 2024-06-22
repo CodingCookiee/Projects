@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     previousNumber = "";
     currentNumber = "";
     operatorValue = "";
-    result.textContent = "";
+    result.textContent = "0";
   });
 
   backspace.addEventListener("click", () => {
@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
       case "-":
         result = parseFloat(previousNumber) - parseFloat(currentNumber);
         break;
-      case "*":
+      case "×":
         result = parseFloat(previousNumber) * parseFloat(currentNumber);
         break;
-      case "/":
+      case "÷":
         result = parseFloat(previousNumber) / parseFloat(currentNumber);
         break;
       case "%":
@@ -97,5 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
     return result;
+  }
+  function display(){
+    result.textContent = currentNumber;
   }
 });
