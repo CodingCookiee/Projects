@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const clear = document.getElementById("clear");
   const backspace = document.getElementById("backspace");
   const sign = document.getElementById("sign");
+  const decimal = document.getElementById("decimal");
 
   let currentNumber = "";
   let previousNumber = "";
@@ -63,6 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
       currentNumber = (parseFloat(currentNumber) * -1).toString();
       result.textContent = currentNumber;
     }
+  });
+  decimal.addEventListener("click", () => {
+    if (currentNumber.includes('.')) return; // Prevent multiple decimal points
+    if (currentNumber === "") {
+      currentNumber = "0.";
+    } else {
+      currentNumber += ".";
+    }
+    result.textContent = currentNumber;
   });
 
   function calculate(previousNumber, currentNumber, operatorValue) {
