@@ -92,12 +92,19 @@ body {
   background-color: #333;
 }
 .container {
-  width:90%;
-  height:90%;
+  width:80%;
+  height:80%;
   margin: 40px auto;
   padding: 20px;
   background-color: #808080;
   border: 1px solid #ddd;
+}
+.header{
+  background-color: #808080;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 .calculator{
   border: 1px solid #ddd;
