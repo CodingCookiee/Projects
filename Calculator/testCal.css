@@ -108,6 +108,21 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
 }
+.calculation-sequence {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  min-height: 30px; /* Ensure consistent size */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Display ellipsis for overflowed content */
+  white-space: nowrap; /* Prevent text wrapping */
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
 .calculator {
   border: 1px solid #ddd;
   background-color: #808080;
