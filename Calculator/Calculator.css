@@ -174,7 +174,7 @@ button#equals {
 }
 
 /* Active state styles for buttons */
-button:active{
+button:active {
   background-color: #555;
 }
 button.operator:active {
@@ -186,7 +186,7 @@ button.operator:active {
 
 button#decimal:active,
 button#sign:active,
-button#clear:active{
+button#clear:active {
   background-color: #3b3f4e; /* Change to a darker color when clicked
       */
 }

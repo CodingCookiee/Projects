@@ -17,15 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const PLACEHOLDER = "0"; // Placeholder for an empty display
 
   const updateResult = (value) => {
-    result.textContent = value.length > MAX_LENGTH ? value.slice(0, MAX_LENGTH) + '...' : value;
+    result.textContent =
+      value.length > MAX_LENGTH ? value.slice(0, MAX_LENGTH) + "..." : value;
     if (value === "") {
       result.textContent = PLACEHOLDER;
     }
   };
 
   const removeActiveClassFromOperators = () => {
-    operators.forEach(operator => {
-      operator.classList.remove('active');
+    operators.forEach((operator) => {
+      operator.classList.remove("active");
     });
   };
 
@@ -47,7 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
     operator.addEventListener("click", () => {
       if (currentNumber === "") return;
       if (previousNumber && currentNumber && operatorValue) {
-        resultValue = calculate(previousNumber, currentNumber, operatorValue).toString();
+        resultValue = calculate(
+          previousNumber,
+          currentNumber,
+          operatorValue
+        ).toString();
         updateResult(resultValue);
         previousNumber = resultValue;
         currentNumber = "";
@@ -58,13 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
       operatorValue = operator.textContent;
       updateResult(previousNumber + " " + operatorValue);
       removeActiveClassFromOperators();
-      operator.classList.add('active'); // Add active class to the clicked operator
+      operator.classList.add("active"); // Add active class to the clicked operator
     });
   });
 
   equals.addEventListener("click", () => {
     if (previousNumber && currentNumber && operatorValue) {
-      resultValue = calculate(previousNumber, currentNumber, operatorValue).toString();
+      resultValue = calculate(
+        previousNumber,
+        currentNumber,
+        operatorValue
+      ).toString();
       updateResult(resultValue);
       previousNumber = "";
       currentNumber = "";
@@ -99,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   decimal.addEventListener("click", () => {
-    if (currentNumber.includes('.')) return;
+    if (currentNumber.includes(".")) return;
     if (currentNumber === "") {
       currentNumber = "0.";
     } else {
