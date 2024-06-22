@@ -174,20 +174,22 @@ button#equals {
 }
 
 /* Active state styles for buttons */
-button:active {
-  background-color: #555; /* Change to a darker color when clicked */
+button:active{
+  background-color: #555;
 }
 button.operator:active {
   background-color: #e67e73; /* Change to a darker color when clicked */
 }
-button#equals:active {
-  background-color: #3e8e41; /* Change to a darker color when clicked */
+#equals:active {
+  background-color: #3e8e41;
 }
+
 button#decimal:active,
 button#sign:active,
-button#clear:active,
-button #backspace:active {
+button#clear:active{
   background-color: #3b3f4e; /* Change to a darker color when clicked
       */
 }
-
+#backspace:active {
+  background-color: #3b3f4e;
+}

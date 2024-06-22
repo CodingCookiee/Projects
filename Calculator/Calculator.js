@@ -13,33 +13,63 @@ document.addEventListener("DOMContentLoaded", () => {
   let operatorValue = "";
   let resultValue = "";
 
+  const MAX_LENGTH = 27; // Maximum number of characters to display
+  const PLACEHOLDER = "0"; // Placeholder for an empty display
+
+  const updateResult = (value) => {
+    result.textContent = value.length > MAX_LENGTH ? value.slice(0, MAX_LENGTH) + '...' : value;
+    if (value === "") {
+      result.textContent = PLACEHOLDER;
+    }
+  };
+
+  const removeActiveClassFromOperators = () => {
+    operators.forEach(operator => {
+      operator.classList.remove('active');
+    });
+  };
+
   numbers.forEach((number) => {
     number.addEventListener("click", () => {
       if (resultValue) {
         resultValue = "";
-        result.textContent = "";
+        currentNumber = "";
       }
-      currentNumber += number.textContent;
-      result.textContent = currentNumber;
+      if (currentNumber.length < MAX_LENGTH) {
+        currentNumber += number.textContent;
+        updateResult(currentNumber);
+        removeActiveClassFromOperators(); // Remove active class when a number is entered
+      }
     });
   });
 
   operators.forEach((operator) => {
     operator.addEventListener("click", () => {
-      if (currentNumber === "") return; // Prevents setting operator if currentNumber is empty
-      previousNumber = currentNumber;
-      currentNumber = "";
+      if (currentNumber === "") return;
+      if (previousNumber && currentNumber && operatorValue) {
+        resultValue = calculate(previousNumber, currentNumber, operatorValue).toString();
+        updateResult(resultValue);
+        previousNumber = resultValue;
+        currentNumber = "";
+      } else {
+        previousNumber = currentNumber;
+        currentNumber = "";
+      }
       operatorValue = operator.textContent;
+      updateResult(previousNumber + " " + operatorValue);
+      removeActiveClassFromOperators();
+      operator.classList.add('active'); // Add active class to the clicked operator
     });
   });
 
   equals.addEventListener("click", () => {
     if (previousNumber && currentNumber && operatorValue) {
-      resultValue = calculate(previousNumber, currentNumber, operatorValue);
-      result.textContent = resultValue;
+      resultValue = calculate(previousNumber, currentNumber, operatorValue).toString();
+      updateResult(resultValue);
       previousNumber = "";
       currentNumber = "";
       operatorValue = "";
+      removeActiveClassFromOperators(); // Remove active class after calculation
     }
   });
 
@@ -48,30 +78,34 @@ document.addEventListener("DOMContentLoaded", () => {
     previousNumber = "";
     currentNumber = "";
     operatorValue = "";
-    result.textContent = "0";
+    updateResult("");
+    removeActiveClassFromOperators(); // Remove active class when cleared
   });
 
   backspace.addEventListener("click", () => {
     if (currentNumber) {
       currentNumber = currentNumber.slice(0, -1);
-      result.textContent = currentNumber;
+      updateResult(currentNumber);
+    } else {
+      updateResult("");
     }
   });
 
   sign.addEventListener("click", () => {
     if (currentNumber) {
       currentNumber = (parseFloat(currentNumber) * -1).toString();
-      result.textContent = currentNumber;
+      updateResult(currentNumber);
     }
   });
+
   decimal.addEventListener("click", () => {
-    if (currentNumber.includes('.')) return; // Prevent multiple decimal points
+    if (currentNumber.includes('.')) return;
     if (currentNumber === "") {
       currentNumber = "0.";
     } else {
       currentNumber += ".";
     }
-    result.textContent = currentNumber;
+    updateResult(currentNumber);
   });
 
   function calculate(previousNumber, currentNumber, operatorValue) {
@@ -96,8 +130,5 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
     }
     return result;
-  }
-  function display(){
-    result.textContent = currentNumber;
   }
 });
