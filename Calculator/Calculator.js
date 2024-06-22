@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const equals = document.getElementById("equals");
   const clear = document.getElementById("clear");
   const backspace = document.getElementById("backspace");
-  const sign = document.getElementById("sign");
+  const operatorSign = document.getElementById("operatorSign");
   const decimal = document.getElementById("decimal");
 
   let currentNumber = "";
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  sign.addEventListener("click", () => {
+  operatorSign.addEventListener("click", () => {
     if (currentNumber) {
       currentNumber = (parseFloat(currentNumber) * -1).toString();
       updateResult(currentNumber);

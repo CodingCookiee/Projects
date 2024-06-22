@@ -161,7 +161,7 @@ button.operator {
 }
 
 button#decimal,
-button#sign,
+button#operatorSign,
 button#equals,
 button#clear,
 button#backspace {
@@ -185,7 +185,7 @@ button.operator:active {
 }
 
 button#decimal:active,
-button#sign:active,
+button#operatorSign:active,
 button#clear:active {
   background-color: #3b3f4e; /* Change to a darker color when clicked
       */
