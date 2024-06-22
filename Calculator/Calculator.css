@@ -119,18 +119,24 @@ body {
 }
 .result{
   background-color: #333;
-  text-align: center;
-}
-.result #result{
-  color: #333;
-  font-size: 1.5rem;
-  border: none;
   border-radius: 2%;
-  width: 90%;
-  height: 60%;
-  text-align: right;
   margin-bottom: 1px solid;
+  width:70%;
+  height:20%
 }
+
+.result p{
+  background-color: #fff;
+  font-size: 1.5rem;
+  border-radius: 2%;
+  width: 95%;
+  height: 50%;
+  text-align:right;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 10px;
+
+} 
 button{
   width: 100%;
   height: 100%;
