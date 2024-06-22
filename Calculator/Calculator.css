@@ -137,6 +137,11 @@ body {
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  width:100%;
+  min-width: 374px;
+  min-height: 56px;
+  max-width: 374px;
+  border: 1px solid #ddd;
 
 } 
 button{
