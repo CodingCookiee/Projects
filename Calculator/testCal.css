@@ -98,7 +98,7 @@ body {
   height: 80%;
   margin: 40px auto;
   padding: 20px;
-  background-color: #808080;
+  background-color: #fff;
   border: 1px solid #ddd;
 }
 .header {
@@ -108,27 +108,13 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
 }
-.calculation-sequence {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  min-height: 30px; /* Ensure consistent size */
-  overflow: hidden; /* Hide overflowed content */
-  text-overflow: ellipsis; /* Display ellipsis for overflowed content */
-  white-space: nowrap; /* Prevent text wrapping */
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-}
 
 .calculator {
-  border: 1px solid #ddd;
+  border: 1px solid #808080;
   background-color: #808080;
   width: 400px;
   height: 600px;
-  border-radius: 2%;
+  border-radius: 1%;
   margin: 20px auto;
   box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
 }
@@ -138,13 +124,15 @@ body {
   margin-bottom: 1px solid;
   width: 70%;
   height: 20%;
+ 
 }
-
-.result p {
+ p{
   background-color: #fff;
-  font-size: 1.5rem;
-  border-radius: 2%;
+  font-size: 1rem;
+  border-radius: 1%;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -157,6 +145,14 @@ body {
   min-height: 56px;
   max-width: 374px;
   border: 1px solid #ddd;
+}
+.calculation-sequence, .display {
+  font-size: 1.2rem;
+  margin-bottom: none;
+  min-height: 30px; /* Ensure consistent size */
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
 }
 button {
   width: 100%;

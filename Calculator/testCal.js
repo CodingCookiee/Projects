@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const result = document.getElementById("result");
+  const result = document.getElementById("display");
   const calculationSequence = document.getElementById("calculation-sequence");
   const numbers = document.querySelectorAll(".number");
   const operators = document.querySelectorAll(".operator");
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let operatorValue = "";
   let resultValue = "";
   let waitingForSecondNumber = false;
+  let calculationFinished = false; // Flag to check if calculation was finished
 
   const MAX_LENGTH = 10; // Maximum number of characters to display
   const PLACEHOLDER = "0"; // Placeholder for an empty display
@@ -62,6 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   numbers.forEach((number) => {
     number.addEventListener("click", () => {
+      if (calculationFinished) {
+        // If calculation finished, start a new number unless waiting for an operator
+        currentNumber = "";
+        previousNumber ="";
+        calculationFinished = false;
+      }
       if (waitingForSecondNumber) {
         currentNumber = "";
         waitingForSecondNumber = false;
@@ -77,14 +84,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   operators.forEach((operator) => {
     operator.addEventListener("click", () => {
-      if (currentNumber === "") return;
+      if (currentNumber === "") {
+        if (resultValue !== "") {
+          currentNumber = resultValue;
+        } else {
+          return;
+        }
+      }
 
       if (previousNumber && currentNumber && operatorValue) {
-        previousNumber = calculate(
-          previousNumber,
-          currentNumber,
-          operatorValue
-        );
+        previousNumber = calculate(previousNumber, currentNumber, operatorValue);
         updateResult(previousNumber);
         currentNumber = "";
       } else {
@@ -97,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCalculationSequence();
       removeActiveClassFromOperators();
       operator.classList.add("active"); // Add active class to the clicked operator
+      calculationFinished = false; // Reset flag when operator is clicked
     });
   });
 
@@ -104,11 +114,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (previousNumber && currentNumber && operatorValue) {
       resultValue = calculate(previousNumber, currentNumber, operatorValue);
       updateResult(resultValue);
-      previousNumber = "";
+      previousNumber = resultValue; // Store result as previous number
       currentNumber = "";
       operatorValue = "";
       updateCalculationSequence();
       removeActiveClassFromOperators(); // Remove active class after calculation
+      waitingForSecondNumber = true; // Allow new calculations after equals
+      calculationFinished = true; // Set flag to indicate calculation finished
     }
   });
 
@@ -120,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateResult("");
     updateCalculationSequence();
     removeActiveClassFromOperators(); // Remove active class when cleared
+    calculationFinished = false; // Reset flag when cleared
   });
 
   backspace.addEventListener("click", () => {
