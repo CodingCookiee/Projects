@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let waitingForSecondNumber = false;
   let calculationFinished = false; // Flag to check if calculation was finished
 
-  const MAX_LENGTH = 10; // Maximum number of characters to display
+  const MAX_LENGTH = 35; // Maximum number of characters to display
   const PLACEHOLDER = "0"; // Placeholder for an empty display
 
   const updateResult = (value) => {

@@ -98,8 +98,9 @@ body {
   height: 80%;
   margin: 40px auto;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #ddd;
+  border: 1px solid #fff;
+  box-shadow:0 2px 4px rgba(207, 207, 223, 0.5);
 }
 .header {
   background-color: #808080;
