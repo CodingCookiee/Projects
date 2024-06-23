@@ -98,8 +98,9 @@ body {
   height: 80%;
   margin: 40px auto;
   padding: 20px;
-  background-color: #808080;
-  border: 1px solid #ddd;
+  background-color: #ddd;
+  border: 1px solid #fff;
+  box-shadow:0 2px 4px rgba(207, 207, 223, 0.5);
 }
 .header {
   background-color: #808080;
@@ -108,46 +109,62 @@ body {
   font-size: 1.2rem;
   font-weight: lighter;
 }
+
 .calculator {
-  border: 1px solid #ddd;
-  background-color: #808080;
-  width: 400px;
-  height: 600px;
-  border-radius: 2%;
+  border: 2px solid #fff;
+  background-color: #141414; 
+  width: 27rem;
+  height: 38rem;
+  padding-left: 5.5px;
+  border-radius: 1.5%;
   margin: 20px auto;
   box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
 }
+.result-td{
+  height: 100px;
+}
 .result {
-  background-color: #333;
-  border-radius: 2%;
-  margin-bottom: 1px solid;
-  width: 70%;
-  height: 20%;
+  background-color: #fff;
+  width: 80%;
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  box-sizing: border-box;
 }
 
-.result p {
-  background-color: #fff;
-  font-size: 1.5rem;
-  border-radius: 2%;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 100%;
-  min-width: 374px;
-  min-height: 56px;
-  max-width: 374px;
-  border: 1px solid #ddd;
+.calculation-sequence{
+  margin-bottom: none;
+  min-height: 30px; /* Ensure consistent size */
+  padding: 0px;
+  background-color: #f0f0f0;
+  min-height: 2.5rem;
+  min-width: 26rem;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  margin-left: 2px;
+  margin-right: 7px;
 }
+.display {
+  min-height: 30px; /* Ensure consistent size */
+  padding: 0px;
+  background-color: #fff;
+  min-width: 26rem;
+  min-height: 3rem;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+  margin-left: 2px;
+  margin-right: 7px;
+}
+
 button {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   border: none;
-  border-radius: 2%;
+  border-radius: 5%;
   background-color: #333;
   color: #fff;
   font-size: 1rem;
