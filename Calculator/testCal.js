@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (calculationFinished) {
         // If calculation finished, start a new number unless waiting for an operator
         currentNumber = "";
-        previousNumber ="";
+        previousNumber = "";
         calculationFinished = false;
       }
       if (waitingForSecondNumber) {
@@ -93,7 +93,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (previousNumber && currentNumber && operatorValue) {
-        previousNumber = calculate(previousNumber, currentNumber, operatorValue);
+        previousNumber = calculate(
+          previousNumber,
+          currentNumber,
+          operatorValue
+        );
         updateResult(previousNumber);
         currentNumber = "";
       } else {
