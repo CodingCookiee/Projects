@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const updateCalculationSequence = () => {
-    calculationSequence.textContent = `${previousNumber} ${operatorValue} ${currentNumber}`;
+    if (operatorValue) {
+      calculationSequence.textContent = `${previousNumber} ${operatorValue} ${currentNumber}`;
+    } else {
+      calculationSequence.textContent = "";
+    }
   };
 
   const removeActiveClassFromOperators = () => {
