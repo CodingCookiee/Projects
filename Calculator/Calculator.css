@@ -100,7 +100,7 @@ body {
   padding: 20px;
   background-color: #ddd;
   border: 1px solid #fff;
-  box-shadow:0 2px 4px rgba(207, 207, 223, 0.5);
+  box-shadow: 0 2px 4px rgba(207, 207, 223, 0.5);
 }
 .header {
   background-color: #808080;
@@ -112,7 +112,7 @@ body {
 
 .calculator {
   border: 2px solid #fff;
-  background-color: #141414; 
+  background-color: #141414;
   width: 27rem;
   height: 38rem;
   padding-left: 5.5px;
@@ -120,7 +120,7 @@ body {
   margin: 20px auto;
   box-shadow: 0 2px 4px rgba(0, 0, 20%, 0.5);
 }
-.result-td{
+.result-td {
   height: 100px;
 }
 .result {
@@ -132,11 +132,11 @@ body {
   text-align: right;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space:nowrap;
+  white-space: nowrap;
   box-sizing: border-box;
 }
 
-.calculation-sequence{
+.calculation-sequence {
   margin-bottom: none;
   min-height: 30px; /* Ensure consistent size */
   padding: 0px;
