@@ -5,15 +5,11 @@
 :root {
   line-height: 1.5;
 }
-
-/* Box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-/* Reset Margin and Padding */
 * {
   margin: 0;
   padding: 0;
